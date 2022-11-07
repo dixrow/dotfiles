@@ -2,6 +2,7 @@ require("plugins")
 require("opt")
 require("hotkeys")
 
+require("nvim-tree").setup()
 vim.cmd([[
 "Save cursor position on file exit
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif

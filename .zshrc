@@ -115,6 +115,12 @@ alias spn='systemctl suspend'
 
 alias cf3='nvim ~/.config/i3/config'
 alias cfz='nvim ~/.zshrc'
-alias cfv='nvim ~/.config/nvim/init.vim'
+alias cfv='ranger ~/.config/nvim/lua'
+
+plugins=(
+	z
+)
+into () {mkdir $1;cd $1}
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+setxkbmap es

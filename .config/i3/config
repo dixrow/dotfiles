@@ -21,6 +21,7 @@ bindsym $mod+Shift+s exec /home/lonedigger/.scripts/scrot.sh
 bindsym $mod+Shift+f exec firefox
 bindsym $mod+Shift+d exec discord
 bindsym $mod+Shift+t exec telegram-desktop
+bindsym $mod+b exec i3lock -c 000000
 
 #General i3 config
 focus_follows_mouse no
@@ -31,6 +32,8 @@ default_border pixel 0
 default_floating_border pixel 0
 hide_edge_borders smart
 focus_on_window_activation none
+
+for_window [class="^.*"] border pixel 0
 
 #Color config
 # class                 border  backgr. text    indicator child_border
@@ -75,7 +78,7 @@ floating_modifier $mod
 bindsym $mod+Return exec alacritty
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id dmenu_run
@@ -118,12 +121,14 @@ bindsym $mod+v split toggle
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
+
+# toggle sticky
+bindsym $mod+s sticky toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
